@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>OnePage</title>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'>
+        <link href="StyleSheet.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+
+            $(document).ready(function () {
+                $("a.anchorLink").anchorAnimate();
+            });
+
+            jQuery.fn.anchorAnimate = function (settings) {
+
+                settings = jQuery.extend({
+                    speed: 400
+                }, settings);
+
+                return this.each(function () {
+                    var caller = this;
+                    $(caller).click(function (event) {
+                        event.preventDefault();
+                        var locationHref = window.location.href;
+                        var elementClick = $(caller).attr("href");
+
+                        var destination = $(elementClick).offset().top;
+                        $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, settings.speed, function () {
+                            window.location.hash = elementClick;
+                        });
+                        return false;
+                    });
+                });
+            };
+
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <a name="Home" ></a> 
+            <!--
+                _______  _______  ______   _______  _______ 
+      |\     /|(  ____ \(  ___  )(  __  \ (  ____ \(  ____ )
+      | )   ( || (    \/| (   ) || (  \  )| (    \/| (    )|
+      | (___) || (__    | (___) || |   ) || (__    | (____)|
+      |  ___  ||  __)   |  ___  || |   | ||  __)   |     __)
+      | (   ) || (      | (   ) || |   ) || (      | (\ (   
+      | )   ( || (____/\| )   ( || (__/  )| (____/\| ) \ \__
+      |/     \|(_______/|/     \|(______/ (_______/|/   \__/
+                                                              
+            -->      
+
+            <header id="header0">
+
+                <div>
+                    <nav id="nav0">
+                        <ul>
+                            <li><a href="#Home">Home</a></li><li><a href="#About">About</a></li><li><a href="#Services" rel="nofollow" class="anchorLink">Services</a></li><li><a href="#Clients">Clients</a></li><li><a href="#Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <!--
+                  _______  _______  _______ 
+        |\     /|(  ___  )(       )(  ____ \
+        | )   ( || (   ) || () () || (    \/
+        | (___) || |   | || || || || (__    
+        |  ___  || |   | || |(_)| ||  __)   
+        | (   ) || |   | || |   | || (      
+        | )   ( || (___) || )   ( || (____/\
+        |/     \|(_______)|/     \|(_______/
+                                            
+            --> 
+
+            <section id="home">
+
+                <div class="centrage" >
+                    <article>
+
+                        <h1>We know how to solve your problem!</h1>
+                    </article>
+                    <article>
+                        <img src="img/socials.png" alt="hihi"/>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 
+            _______  _______  _______          _________ _______  _______ 
+           (  ____ \(  ____ \(  ____ )|\     /|\__   __/(  ____ \(  ____ \
+           | (    \/| (    \/| (    )|| )   ( |   ) (   | (    \/| (    \/
+           | (_____ | (__    | (____)|| |   | |   | |   | |      | (__    
+           (_____  )|  __)   |     __)( (   ) )   | |   | |      |  __)   
+                 ) || (      | (\ (    \ \_/ /    | |   | |      | (      
+           /\____) || (____/\| ) \ \__  \   /  ___) (___| (____/\| (____/\
+           \_______)(_______/|/   \__/   \_/   \_______/(_______/(_______/
+                                                                                                                         
+            -->   
+            <a name="Services"></a>
+            <section id="service">
+                <div class="centrage">
+                    <article>
+                        <h1>Our Service</h1>
+                        <p>rejkehrioer ergfjheriklehor dfjklnf fdjklser sdjkldf slfs lsdjeslz lksjdfklfez lsjfezpjf lejfsd slf lsejfezo zjf</p>
+                    </article>
+                    <article>
+                        <div class='div0 bloc220'>
+                            <img class='borderR' src="img/box1_img1.png" alt=""/>
+                            <p class='T'>Working in Shop</p>
+                            <p class="sousT">Branding/Design</p>
+                        </div>
+                        <div class='div0 bloc220'>
+                            <img class='borderR' src="img/box1_img2.png" alt=""/>
+                            <p class='T'>Working in Shop</p>
+                            <p class="sousT">Branding/Design</p>
+                        </div>
+                        <div class='div0 bloc220'>
+                            <img class='borderR' src="img/box1_img3.png" alt=""/>
+                            <p class='T'>Working in Shop</p>
+                            <p class="sousT">Branding/Design</p>
+                        </div>
+                        <div class='div0 bloc220'>
+                            <img class='borderR' src="img/box1_img4.png" alt=""/>
+                            <p class='T'>Working in Shop</p>
+                            <p class="sousT">Branding/Design</p>
+                        </div>
+                        <div class="CB"></div>
+                    </article>
+
+
+
+                </div>
+
+            </section>
+            <!-- 
+            _______  _       _________ _______  _       _________
+           (  ____ \( \      \__   __/(  ____ \( (    /|\__   __/
+           | (    \/| (         ) (   | (    \/|  \  ( |   ) (   
+           | |      | |         | |   | (__    |   \ | |   | |   
+           | |      | |         | |   |  __)   | (\ \) |   | |   
+           | |      | |         | |   | (      | | \   |   | |   
+           | (____/\| (____/\___) (___| (____/\| )  \  |   | |   
+           (_______/(_______/\_______/(_______/|/    )_)   )_(   
+                                                                                                           
+            
+            -->           
+            <a name="Clients"></a>
+            <section id="clients">
+                <div class="centrage">
+                    <article>
+                        <h1>Our Clients</h1>
+                    </article>
+
+                    <article>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo1.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo2.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo3.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo4.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo5.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo6.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo7.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+                        <div class='div1 bloc220'>
+                            <img src="img/logo8.jpg" alt=""/>
+                            <p class='T'>Company Name</p>
+                            <p class="sousT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <p><a href='#'>Go to site ></a></p>
+                        </div>
+
+                        <div class="CB"></div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!--
+             .----------------.  .----------------.  .-----------------.
+           | .--------------. || .--------------. || .--------------. |
+           | |  _________   | || |     _____    | || | ____  _____  | |
+           | | |_   ___  |  | || |    |_   _|   | || ||_   \|_   _| | |
+           | |   | |_  \_|  | || |      | |     | || |  |   \ | |   | |
+           | |   |  _|      | || |      | |     | || |  | |\ \| |   | |
+           | |  _| |_       | || |     _| |_    | || | _| |_\   |_  | |
+           | | |_____|      | || |    |_____|   | || ||_____|\____| | |
+           | |              | || |              | || |              | |
+           | '--------------' || '--------------' || '--------------' |
+            '----------------'  '----------------'  '----------------' 
+            
+            -->
+
+
+        </div>
+    </body>
+</html>
