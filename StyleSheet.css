@@ -9,7 +9,8 @@ and open the template in the editor.
 */
 
 body {
-    color: white;
+    //color: white;
+	color: blue;
     background-color: blue;
     font-family: 'Signika', sans-serif;
     font-size: 13px;
